@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/amandajean1809/miniature-octo-robot/issues"
   },
-  "homepage": "https://github.com/amandajean1809/miniature-octo-robot#readme"
+  "homepage": "https://github.com/amandajean1809/miniature-octo-robot#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.6"
+  }
 }
