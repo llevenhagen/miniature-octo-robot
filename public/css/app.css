@@ -22,7 +22,8 @@ head {
 body {
   align-content: center;
   background-color: var(--dusty-purple);
-  border: 2px dashed var(--darkpurple);
+  border: 2px solid var(--darkpurple);
+  box-shadow: .5em .5em 2em black;
   border-radius: 2px;
   height: 150%;
   width: 60%;
@@ -37,15 +38,12 @@ background-color: var(--darkpurple);
 color: var(--salmon);
 padding-top: 20px;
 padding-bottom: 20px;
-}
-
-a {
-
-}
-
-a:visited {
+text-transform: uppercase;
+border-bottom: 4px solid var(--salmon);
 
 }
+
+
 
 input {
   width: 120px;
@@ -62,6 +60,16 @@ button {
   color: white;
   margin: 4px;
 
+
+}
+button:hover, input[type="submit"]:hover {
+  background-color: var(--darkpurple);
+  border: 1px solid var(--darkpurple);
+  border-radius: 3px;
+  width: 120px;
+  height: 25px;
+  color: white;
+  margin: 4px;
 
 }
 
