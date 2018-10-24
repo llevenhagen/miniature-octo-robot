@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
 :root {
 --salmon: #DB7F67;
 --tan: #DBBEA1;
@@ -17,10 +20,13 @@
 body {
   width: 80%;
   height: 90%;
+  background-color: var(--tan);
+  border: 1px solid var(--dusty-purple);
 }
 
 h1 {
-
+ font-size: 30px;
+font-family: 'Playfair Display', serif;
 }
 
 a {
