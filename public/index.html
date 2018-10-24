@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="OurApp">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/app.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <title>Recipes Galore</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+  </head>
+
+  <body ng-controller="groupController as ctrl">
+    <div class="container">
+      <center>
+        <h1>Recipes Galore! <span class="lnr lnr-dinner"></span></h1>
+        <h5>Your recipes: </h5>
+        <table>
+          <tr ng-repeat="recipe in ctrl.allrecipes">
+            <th ng-click="ctrl.toggleDetailsShow(recipe); ctrl.indexOfName = $index">
+              {{recipe.name}}</th>
+            <td><img src="{{recipe.img}}"/></td>
+            <td>{{recipe.time}}</td>
+            <td>{{recipe.ingredients}}</td>
+
+            <td>
+              <button ng-click="ctrl.toggleShowEditForm(recipe); ctrl.indexOfEditFormToShow = $index">Edit this Recipe</button>
+              <button ng-click="ctrl.deleteRecipe(recipe)">Delete this Recipe</button>
+              <form ng-if="$index === ctrl.indexOfEditFormToShow && ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
+
+              <form class="update-form" ng-if="ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
+
+                <input type="text" ng-model="ctrl.updatedname" placeholder="name"/>
+                <input type="text" ng-model="ctrl.updatedtime" placeholder="time"/>
+                <input type="text" ng-model="ctrl.updatedingredients" placeholder="ingredients"/>
+                <input type="text" ng-model="ctrl.updatedimg" placeholder="img"/>
+                <input type="submit" value="Update Recipe"/>
+              </form>
+            </td>
+          </tr>
+        </table>
+
+
+
+
+    <button ng-click="ctrl.toggleShowAddForm()">Add recipe</button>
+    <form ng-submit="ctrl.createRecipe()" ng-if="ctrl.addRecipe">
+      <input type="text" ng-model="ctrl.name" placeholder="name"/>
+      <input type="text" ng-model="ctrl.time" placeholder="time"/>
+      <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
+      <input type="text" ng-model="ctrl.img" placeholder="url"/>
+      <input type="submit" calue="Add Recipe"/>
+    </form>
+  </center>
+  </div>
+</body>
+
+</html>

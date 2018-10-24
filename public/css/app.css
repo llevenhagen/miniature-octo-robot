@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
+:root {
+--salmon: #DB7F67;
+--tan: #DBBEA1;
+--dusty-purple: #A37B73;
+--darkpurple: #3F292B;
+--pink: #D34F73;
+}
+.container {
+  margin-bottom: 5vw;
+}
+body {
+  padding-bottom: -5vw;
+}
+.lnr-dinner {
+  color: var(--salmon);
+  width: 30px;
+}
+table {
+  border-radius: 10px;
+  border: 5px solid #E9CD95;
+  background: white;
+  height: 40vw;
+  width: 90%;
+  padding-left: 2vw;
+}
+
+td, th {
+  font-size: 25px;
+  color: var(--darkpurple);
+  padding: 400px auto;
+}
+th {
+padding: 400px auto;
+}
+
+body {
+  align-content: center;
+  background-color: var(--dusty-purple);
+  border: 2px solid var(--darkpurple);
+  box-shadow: .5em .5em 2em black;
+  border-radius: 2px;
+  height: 150%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+h1 {
+ font-size: 45px;
+font-family: 'Playfair Display', serif;
+background-color: var(--darkpurple);
+color: var(--salmon);
+padding-top: 20px;
+padding-bottom: 20px;
+text-transform: uppercase;
+border-bottom: 4px solid var(--salmon);
+
+
+}
+
+h5 {
+font-family: 'Playfair Display', serif;
+font-size: 27px;
+color: var(--darkpurple);
+border-bottom: 3px solid var(--darkpurple);
+margin: 5px 40px 10px 40px;
+box-shadow: bottom 1px
+
+}
+
+
+
+input {
+  width: 120px;
+  height: 25px;
+  font-size: 20px;
+}
+
+button {
+  background-color: var(--salmon);
+  border: 1px solid var(--dusty-purple);
+  border-radius: 3px;
+  width: 120px;
+  height: 3vw;
+  color: white;
+  margin: 4px;
+  font-size: 1.1vw;
+
+
+}
+img {
+  width: 7vw;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: var(--darkpurple);
+  border: 1px solid var(--darkpurple);
+  border-radius: 3px;
+  color: white;
+  margin: 4px;
+
+}
+
+
+input[type="submit"] {
+  background-color: var(--salmon);
+  border: 1px solid var(--dusty-purple);
+  border-radius: 3px;
+  width: 120px;
+  height: 25px;
+  color: white;
+  margin: 4px;
+  font-size: 13px;
+
+}
