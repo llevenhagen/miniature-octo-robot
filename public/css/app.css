@@ -22,25 +22,75 @@ head {
 body {
   align-content: center;
   background-color: var(--dusty-purple);
-  border: 2px dashed var(--darkpurple);
+  border: 2px solid var(--darkpurple);
+  box-shadow: .5em .5em 2em black;
   border-radius: 2px;
   height: 150%;
-  width: 60%
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 h1 {
- font-size: 30px;
+ font-size: 45px;
 font-family: 'Playfair Display', serif;
+background-color: var(--darkpurple);
+color: var(--salmon);
+padding-top: 20px;
+padding-bottom: 20px;
+text-transform: uppercase;
+border-bottom: 4px solid var(--salmon);
 }
 
-a {
+h5 {
+font-family: 'Playfair Display', serif;
+font-size: 27px;
+color: var(--darkpurple);
+border-bottom: 3px solid var(--darkpurple);
+margin: 5px 40px 10px 40px;
 
 }
 
-a:visited {
+
+
+input {
+  width: 120px;
+  height: 25px;
+  font-size: 20px;
+}
+
+button {
+  background-color: var(--salmon);
+  border: 1px solid var(--dusty-purple);
+  border-radius: 3px;
+  width: 120px;
+  height: 25px;
+  color: white;
+  margin: 4px;
+
 
 }
+button:hover, input[type="submit"]:hover {
+  background-color: var(--darkpurple);
+  border: 1px solid var(--darkpurple);
+  border-radius: 3px;
+  width: 120px;
+  height: 25px;
+  color: white;
+  margin: 4px;
+
+}
+
+
 input[type="submit"] {
+  background-color: var(--salmon);
+  border: 1px solid var(--dusty-purple);
+  border-radius: 3px;
+  width: 120px;
+  height: 25px;
+  color: white;
+  margin: 4px;
+  font-size: 13px;
 
 }
 
