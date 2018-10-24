@@ -28,14 +28,12 @@
               <button ng-click="ctrl.deleteRecipe(recipe)">Delete this Recipe</button>
               <form ng-if="$index === ctrl.indexOfEditFormToShow && ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
 
-              <button ng-click="ctrl.toggleShowEditForm()">Edit this Recipe</button><br>
-              <button>Delete this Recipe </button>
               <form ng-if="ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
 
-                <input type="text" ng-model="ctrl.name" placeholder="name"/>
-                <input type="text" ng-model="ctrl.time" placeholder="time"/>
-                <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
-                <input type="text" ng-model="ctrl.img" placeholder="img"/>
+                <input type="text" ng-model="ctrl.updatedname" placeholder="name"/>
+                <input type="text" ng-model="ctrl.updatedtime" placeholder="time"/>
+                <input type="text" ng-model="ctrl.updatedingredients" placeholder="ingredients"/>
+                <input type="text" ng-model="ctrl.updatedimg" placeholder="img"/>
                 <input type="submit" value="Update Recipe"/>
               </form>
             </td>

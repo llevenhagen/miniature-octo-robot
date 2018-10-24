@@ -10,6 +10,7 @@ app.controller('groupController', ['$http', function($http) {
   // default variables
   this.addRecipe = false;
   this.detailsShow = false;
+  this.showEditForm = false;
 
   this.getRecipes = () => {
     $http({
@@ -55,8 +56,6 @@ app.controller('groupController', ['$http', function($http) {
          console.log('error');
        });
      }
-
-
      this.deleteRecipe = (recipe) => {
        $http({
          method: 'DELETE',
@@ -68,7 +67,24 @@ app.controller('groupController', ['$http', function($http) {
        });
      }
 
-    // this.updateRecipe = (id)
+    this.updateRecipe = (recipe) => {
+      $http({
+        method: 'PUT',
+        url: '/recipes/' + recipe._id,
+        data: {
+          name: this.updatedname,
+          time: this.updatedtime,
+          img: this.updatedimg,
+          ingredients: this.updatedingredients
+        }
+      }).then((res) => {
+         this.getRecipes();
+         this.showEditForm = null;
+      }, (err) => {
+        console.log('error');
+      });
+    }
+
     // call on page load
     this.getRecipes();
 
@@ -78,5 +94,9 @@ app.controller('groupController', ['$http', function($http) {
 
     this.toggleShowAddForm = () => {
       this.addRecipe = !this.addRecipe;
+    }
+
+    this.toggleShowEditForm = (recipe) => {
+      this.showEditForm = !this.showEditForm;
     }
 }]);  // end app.controller
