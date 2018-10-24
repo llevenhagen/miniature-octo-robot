@@ -22,15 +22,14 @@
       <td ng-if="ctrl.detailsShow">{{recipe.time}}</td>
       <td ng-if="ctrl.detailsShow">{{recipe.ingredients}}</td>
       <td ng-if="ctrl.detailsShow">
-<<<<<<< HEAD
         <button ng-click="ctrl.toggleShowEditForm(recipe); ctrl.indexOfEditFormToShow = $index">Edit this Recipe</button>
         <button ng-click="ctrl.toggleDeleteRecipe(recipe)">Delete this Recipe</button>
         <form ng-if="$index === ctrl.indexOfEditFormToShow && ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
-=======
+
         <button ng-click="ctrl.toggleShowEditForm()">Edit this Recipe</button><br>
         <button>Delete this Recipe </button>
         <form ng-if="ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
->>>>>>> a272f00eda82ec34a596dbbc10478782eb572344
+
           <input type="text" ng-model="ctrl.name" placeholder="name"/>
           <input type="text" ng-model="ctrl.time" placeholder="time"/>
           <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
