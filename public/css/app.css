@@ -40,6 +40,14 @@ padding-top: 20px;
 padding-bottom: 20px;
 text-transform: uppercase;
 border-bottom: 4px solid var(--salmon);
+}
+
+h5 {
+font-family: 'Playfair Display', serif;
+font-size: 27px;
+color: var(--darkpurple);
+border-bottom: 3px solid var(--darkpurple);
+margin: 5px 40px 10px 40px;
 
 }
 
