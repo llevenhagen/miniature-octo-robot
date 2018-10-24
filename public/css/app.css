@@ -10,7 +10,9 @@
 
 }
 
+head {
 
+}
 
 .container {
 
@@ -18,10 +20,12 @@
 }
 
 body {
-  width: 80%;
-  height: 90%;
-  background-color: var(--tan);
-  border: 1px solid var(--dusty-purple);
+  align-content: center;
+  background-color: var(--dusty-purple);
+  border: 2px dashed var(--darkpurple);
+  border-radius: 2px;
+  height: 150%;
+  width: 60%
 }
 
 h1 {
