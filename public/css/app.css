@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
+:root {
+--salmon: #DB7F67;
+--tan: #DBBEA1;
+--dusty-purple: #A37B73;
+--darkpurple: #3F292B;
+--pink: #D34F73;
+
+}
+
+
+
+.container {
+
+
+}
+
+body {
+  width: 80%;
+  height: 90%;
+  background-color: var(--tan);
+  border: 1px solid var(--dusty-purple);
+}
+
+h1 {
+ font-size: 30px;
+font-family: 'Playfair Display', serif;
+}
+
+a {
+
+}
+
+a:visited {
+
+}
+input[type="submit"] {
+
+}
+
+
+input[type="submit"]:hover {
+
+}
