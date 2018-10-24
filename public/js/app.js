@@ -55,9 +55,24 @@ app.controller('groupController', ['$http', function($http) {
          console.log('error');
        });
      }
+
+
+     this.deleteRecipe = recipe => {
+       $http({
+         method: 'DELETE',
+         url: '/recipes/' + id
+
+
+       })
+     }
+
     // this.updateRecipe = (id)
     // call on page load
     this.getRecipes();
+
+    this.toggleDetailsShow = (recipe) => {
+      this.detailsShow = !this.detailsShow
+    }
 
     this.toggleShowAddForm = () => {
       this.addRecipe = !this.addRecipe;
