@@ -5,8 +5,8 @@ const mongoose = require('mongoose')
 app.use(express.json())
 app.use(express.static('public'))
 
-const recipesController = require('./controllers/recipies.js')
-app.use('/recipies', recipiesController)
+const recipesController = require('./controllers/recipes.js')
+app.use('/recipes', recipiesController)
 
 
 mongoose.connect('mongodb://localhost:27017/cookbook', { useNewUrlParser: true })
