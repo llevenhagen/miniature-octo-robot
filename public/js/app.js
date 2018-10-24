@@ -57,13 +57,15 @@ app.controller('groupController', ['$http', function($http) {
      }
 
 
-     this.deleteRecipe = recipe => {
+     this.deleteRecipe = (recipe) => {
        $http({
          method: 'DELETE',
-         url: '/recipes/' + id
-
-
-       })
+         url: '/recipes/' + recipe._id
+       }).then((res) => {
+          this.getRecipes();
+       }, (err) => {
+         console.log('error');
+       });
      }
 
     // this.updateRecipe = (id)
