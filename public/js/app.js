@@ -22,7 +22,7 @@ app.controller('groupController', ['$http', function($http) {
       console.log('error');
     });
   }
-  // this.createRecipe() = () => {
+  // this.createRecipe = () => {
   //     $http({
   //       method: 'POST',
   //       url: '/recipes',
