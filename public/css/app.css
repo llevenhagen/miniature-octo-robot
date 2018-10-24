@@ -7,17 +7,14 @@
 --dusty-purple: #A37B73;
 --darkpurple: #3F292B;
 --pink: #D34F73;
-
 }
 
-head {
-
+.lnr-dinner {
+  color: var(--salmon);
+  width: 30px;
 }
 
-.container {
 
-
-}
 
 body {
   align-content: center;
@@ -40,6 +37,7 @@ padding-top: 20px;
 padding-bottom: 20px;
 text-transform: uppercase;
 border-bottom: 4px solid var(--salmon);
+
 }
 
 h5 {
@@ -91,10 +89,5 @@ input[type="submit"] {
   color: white;
   margin: 4px;
   font-size: 13px;
-
-}
-
-
-input[type="submit"]:hover {
 
 }
