@@ -8,17 +8,33 @@
 --darkpurple: #3F292B;
 --pink: #D34F73;
 }
-
+.container {
+  margin-bottom: 5vw;
+}
+body {
+  padding-bottom: -5vw;
+}
 .lnr-dinner {
   color: var(--salmon);
   width: 30px;
 }
+table {
+  border-radius: 10px;
+  border: 5px solid #E9CD95;
+  background: white;
+  height: 40vw;
+  width: 90%;
+  padding-left: 2vw;
+}
 
 td, th {
   font-size: 25px;
-  color: var(--darkpurple)
+  color: var(--darkpurple);
+  padding: 400px auto;
 }
-
+th {
+padding: 400px auto;
+}
 
 body {
   align-content: center;
@@ -68,18 +84,21 @@ button {
   border: 1px solid var(--dusty-purple);
   border-radius: 3px;
   width: 120px;
-  height: 25px;
+  height: 3vw;
   color: white;
   margin: 4px;
+  font-size: 1.1vw;
 
 
 }
+img {
+  width: 7vw;
+}
+
 button:hover, input[type="submit"]:hover {
   background-color: var(--darkpurple);
   border: 1px solid var(--darkpurple);
   border-radius: 3px;
-  width: 120px;
-  height: 25px;
   color: white;
   margin: 4px;
 

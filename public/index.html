@@ -18,8 +18,7 @@
           <tr ng-repeat="recipe in ctrl.allrecipes">
             <th ng-click="ctrl.toggleDetailsShow(recipe); ctrl.indexOfName = $index">
               {{recipe.name}}</th>
-              <div class = "recipe" ng-if="ctrl.detailsShow && $index === ctrl.indexOfName">
-            <td><img src="{{recipe.img}}" width = 70px/></td>
+            <td><img src="{{recipe.img}}"/></td>
             <td>{{recipe.time}}</td>
             <td>{{recipe.ingredients}}</td>
 
@@ -28,7 +27,7 @@
               <button ng-click="ctrl.deleteRecipe(recipe)">Delete this Recipe</button>
               <form ng-if="$index === ctrl.indexOfEditFormToShow && ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
 
-              <form ng-if="ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
+              <form class="update-form" ng-if="ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
 
                 <input type="text" ng-model="ctrl.updatedname" placeholder="name"/>
                 <input type="text" ng-model="ctrl.updatedtime" placeholder="time"/>
@@ -39,7 +38,7 @@
             </td>
           </tr>
         </table>
-        </div>
+
 
 
 
