@@ -5,6 +5,20 @@
     <title>Recipes Galore</title>
   </head>
   <body ng-controller="groupController as ctrl">
-
+<div class="container">
+  <h1>Recipes Galore!</h1>
+  <h5>Your recipes:</h5>
+  <table>
+    <tr ng-repeat="recipe in ctrl.recipes">
+      <th ng-click="toggleDetailsShow(recipe)">{{recipe.name}}</th>
+      <td ng-if="ctrl.detailsShow">{{recipe.time}}</td>
+      <td ng-if="ctrl.detailsShow">{{recipe.ingredients}}</td>
+      <td ng-if="ctrl.detailsShow">
+        <button>Edit this Recipe</button>
+        <button>Delete this Recipe</button>
+      </td>
+    </tr>
+  </table>
+  <button>Add recipe</button>
   </body>
 </html>
