@@ -18,13 +18,20 @@
       <td ng-if="ctrl.detailsShow">{{recipe.time}}</td>
       <td ng-if="ctrl.detailsShow">{{recipe.ingredients}}</td>
       <td ng-if="ctrl.detailsShow">
-        <button>Edit this Recipe</button>
+        <button ng-click="ctrl.toggleShowEditForm()">Edit this Recipe</button>
         <button>Delete this Recipe</button>
+        <form ng-if="ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
+          <input type="text" ng-model="ctrl.name" placeholder="name"/>
+          <input type="text" ng-model="ctrl.time" placeholder="time"/>
+          <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
+          <input type="text" ng-model="ctrl.img" placeholder="img"/>
+          <input type="submit" value="Update Recipe"/>
+        </form>
       </td>
     </tr>
   </table>
-  <button ng-click="ctrl.toggleShowAddForm">Add recipe</button>
-  <form ng-if="ctrl.addRecipe">
+  <button ng-click="ctrl.toggleShowAddForm()">Add recipe</button>
+  <form ng-submit="ctrl.createRecipe()" ng-if="ctrl.addRecipe">
     <input type="text" ng-model="ctrl.name" placeholder="name"/>
     <input type="text" ng-model="ctrl.time" placeholder="time"/>
     <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
