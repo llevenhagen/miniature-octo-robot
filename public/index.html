@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr" ng-app="OurApp">
   <head>
     <meta charset="utf-8">
-    <link href="/css/app.css" rel="stylesheet"/>
+    <!-- <link href="/css/app.css" rel="stylesheet"/> -->
     <title>Recipes Galore</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js" charset="utf-8"></script>
-        <script src="/js/app.js" charset="utf-8"></script>
+        <script src="js/app.js" charset="utf-8"></script>
   </head>
   <body ng-controller="groupController as ctrl">
 <div class="container">
@@ -13,8 +13,13 @@
   <h1>Recipes Galore!</h1>
   <h5>Your recipes:</h5>
   <table>
-    <tr ng-repeat="recipe in ctrl.recipes">
-      <th ng-click="ctrl.toggleDetailsShow(recipe)">{{recipe.name}}</th>
+    <!-- <tr ng-repeat="recipe in ctrl.recipes"> -->
+      <ul>
+        <li ng-repeat="recipe in ctrl.recipes">
+          {{recipe.name}}   {{recipe.time}}
+        </li>
+      </ul>
+      <!-- <th ng-click="ctrl.toggleDetailsShow(recipe)">{{recipe.name}}</th>
       <td ng-if="ctrl.detailsShow"><img src="{{recipe.img}}"/></td>
       <td ng-if="ctrl.detailsShow">{{recipe.time}}</td>
       <td ng-if="ctrl.detailsShow">{{recipe.ingredients}}</td>
@@ -28,17 +33,17 @@
           <input type="text" ng-model="ctrl.img" placeholder="img"/>
           <input type="submit" value="Update Recipe"/>
         </form>
-      </td>
-    </tr>
+      </td> -->
+    <!-- </tr> -->
   </table>
-  <button ng-click="ctrl.toggleShowAddForm()">Add recipe</button>
+  <!-- <button ng-click="ctrl.toggleShowAddForm()">Add recipe</button>
   <form ng-submit="ctrl.createRecipe()" ng-if="ctrl.addRecipe">
     <input type="text" ng-model="ctrl.name" placeholder="name"/>
     <input type="text" ng-model="ctrl.time" placeholder="time"/>
     <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
     <input type="text" ng-model="ctrl.img" placeholder="url"/>
     <input type="submit" calue="Add Recipe"/>
-  </form>
+  </form> -->
 </body>
 </center>
 </html>
