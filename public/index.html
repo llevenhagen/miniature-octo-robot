@@ -19,7 +19,7 @@
       <td ng-if="ctrl.detailsShow">{{recipe.time}}</td>
       <td ng-if="ctrl.detailsShow">{{recipe.ingredients}}</td>
       <td ng-if="ctrl.detailsShow">
-        <button ng-click="ctrl.toggleShowEditForm()">Edit this Recipe</button>
+        <button ng-click="ctrl.toggleShowEditForm()">Edit this Recipe</button><br>
         <button>Delete this Recipe</button>
         <form ng-if="ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
           <input type="text" ng-model="ctrl.name" placeholder="name"/>
