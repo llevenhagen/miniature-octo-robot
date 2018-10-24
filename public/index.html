@@ -2,48 +2,52 @@
 <html lang="en" dir="ltr" ng-app="OurApp">
   <head>
     <meta charset="utf-8">
-    <!-- <link href="/css/app.css" rel="stylesheet"/> -->
+    <link href="css/app.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <title>Recipes Galore</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js" charset="utf-8"></script>
-        <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
   </head>
+
   <body ng-controller="groupController as ctrl">
-<div class="container">
-  <center>
-  <h1>Recipes Galore!</h1>
-  <h5>Your recipes:</h5>
-  <table>
-    <!-- <tr ng-repeat="recipe in ctrl.recipes"> -->
-      <ul>
-        <li ng-repeat="recipe in ctrl.recipes">
-          {{recipe.name}}   {{recipe.time}}
-        </li>
-      </ul>
-      <!-- <th ng-click="ctrl.toggleDetailsShow(recipe)">{{recipe.name}}</th>
-      <td ng-if="ctrl.detailsShow"><img src="{{recipe.img}}"/></td>
-      <td ng-if="ctrl.detailsShow">{{recipe.time}}</td>
-      <td ng-if="ctrl.detailsShow">{{recipe.ingredients}}</td>
-      <td ng-if="ctrl.detailsShow">
-        <button ng-click="ctrl.toggleShowEditForm()">Edit this Recipe</button>
-        <button>Delete this Recipe</button>
-        <form ng-if="ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
-          <input type="text" ng-model="ctrl.name" placeholder="name"/>
-          <input type="text" ng-model="ctrl.time" placeholder="time"/>
-          <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
-          <input type="text" ng-model="ctrl.img" placeholder="img"/>
-          <input type="submit" value="Update Recipe"/>
-        </form>
-      </td> -->
-    <!-- </tr> -->
-  </table>
-  <!-- <button ng-click="ctrl.toggleShowAddForm()">Add recipe</button>
-  <form ng-submit="ctrl.createRecipe()" ng-if="ctrl.addRecipe">
-    <input type="text" ng-model="ctrl.name" placeholder="name"/>
-    <input type="text" ng-model="ctrl.time" placeholder="time"/>
-    <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
-    <input type="text" ng-model="ctrl.img" placeholder="url"/>
-    <input type="submit" calue="Add Recipe"/>
-  </form> -->
+    <div class="container">
+      <center>
+        <h1>Recipes Galore! <span class="lnr lnr-dinner"></span></h1>
+        <h5>Your recipes: </h5>
+        <table>
+          <tr ng-repeat="recipe in ctrl.allrecipes">
+            <th ng-click="ctrl.toggleDetailsShow(recipe)">{{recipe.name}}</th>
+            <td ng-if="ctrl.detailsShow"><img src="{{recipe.img}}"/></td>
+            <td ng-if="ctrl.detailsShow">{{recipe.time}}</td>
+            <td ng-if="ctrl.detailsShow">{{recipe.ingredients}}</td>
+            <td ng-if="ctrl.detailsShow">
+              <button ng-click="ctrl.toggleShowEditForm(recipe); ctrl.indexOfEditFormToShow = $index">Edit this Recipe</button>
+              <button ng-click="ctrl.toggleDeleteRecipe(recipe)">Delete this Recipe</button>
+              <form ng-if="$index === ctrl.indexOfEditFormToShow && ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
+
+              <button ng-click="ctrl.toggleShowEditForm()">Edit this Recipe</button><br>
+              <button>Delete this Recipe </button>
+              <form ng-if="ctrl.showEditForm" ng-submit="ctrl.updateRecipe(recipe)">
+
+                <input type="text" ng-model="ctrl.name" placeholder="name"/>
+                <input type="text" ng-model="ctrl.time" placeholder="time"/>
+                <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
+                <input type="text" ng-model="ctrl.img" placeholder="img"/>
+                <input type="submit" value="Update Recipe"/>
+              </form>
+            </td>
+          </tr>
+        </table>
+    <button ng-click="ctrl.toggleShowAddForm()">Add recipe</button>
+    <form ng-submit="ctrl.createRecipe()" ng-if="ctrl.addRecipe">
+      <input type="text" ng-model="ctrl.name" placeholder="name"/>
+      <input type="text" ng-model="ctrl.time" placeholder="time"/>
+      <input type="text" ng-model="ctrl.ingredients" placeholder="ingredients"/>
+      <input type="text" ng-model="ctrl.img" placeholder="url"/>
+      <input type="submit" calue="Add Recipe"/>
+    </form>
+  </center>
+  </div>
 </body>
-</center>
+
 </html>

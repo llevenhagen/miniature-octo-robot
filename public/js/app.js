@@ -1,8 +1,9 @@
 const app = angular.module('OurApp', []);
 
 app.controller('groupController', ['$http', function($http) {
+  // this.foo='bar';
 
-    const controller = this;
+  const controller = this;
     //
     // this.createRecipe = function() {
     //   $http({
@@ -21,17 +22,18 @@ app.controller('groupController', ['$http', function($http) {
     //     console.log('error');
     //   });
     // }
-    this.getRecipes = function() {
+    this.getRecipes = () => {
       $http({
         method: 'GET',
         url: '/recipes'
-      }).then(function(response) {
-        controller.recipes = response.data;
-        console.log(response.data);
-      }, function() {
+      }).then((res) => {
+        console.log(res.data);
+        controller.allrecipes = res.data;
+      }, (err) => {
         console.log('error');
       });
     }
-    // this.recipes();
+    // call on page load
+    this.getRecipes();
 
 }]);  // end app.controller
