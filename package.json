@@ -1,0 +1,24 @@
+{
+  "name": "miniature-octo-robot",
+  "version": "1.0.0",
+  "description": "Brooke Billmaier - So excited to make recipes! Laura Levenhagen - Hello world!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amandajean1809/miniature-octo-robot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amandajean1809/miniature-octo-robot/issues"
+  },
+  "homepage": "https://github.com/amandajean1809/miniature-octo-robot#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.6"
+  }
+}
